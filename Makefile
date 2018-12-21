@@ -4,10 +4,10 @@ SERVICE_DIR=/etc/systemd/system
 
 .PHONY: config test_config
 config:
-	mkdir -p $(WORKING_DIR)
-	sudo cp $(CONF)/Makefile $(WORKING_DIR)
-	sudo cp $(CONF)/setting.env $(WORKING_DIR)
-	sudo cp $(CONF)/route10.service $(SERVICE_DIR)
+	sudo mkdir -p $(WORKING_DIR)
+	sudo cp $(CONF_DIR)/Makefile $(WORKING_DIR)
+	sudo cp $(CONF_DIR)/setting.env $(WORKING_DIR)
+	sudo cp $(CONF_DIR)/route10.service $(SERVICE_DIR)
 test_config:
 	python3 validator.py -f $(WORKING_DIR)
 	python3 validator.py -f $(WORKING_DIR)/setting.env
@@ -36,6 +36,7 @@ test_start:
 stop:
 	sudo systemctl stop route10.service
 	sudo systemctl disable route10.service
+	sudo systemctl daemon-reload
 test_stop:
 	sudo systemctl status route10.service
 

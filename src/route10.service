@@ -6,8 +6,8 @@ Requires=network.target
 [Service]
 Type=oneshot
 RemainAfterExit=true
-ExecStart=/usr/bin/make -f /etc/route10/Makefile start
-ExecStop=/usr/bin/make -f /etc/route10/Makefile stop
+ExecStart=/usr/bin/make -C /etc/route10/ start
+ExecStop=/usr/bin/make -C /etc/route10/ stop
 
 [Install]
 WantedBy=default.target

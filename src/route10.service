@@ -1,0 +1,13 @@
+[Unit]
+Description=Sub10 service
+After=network.target
+Requires=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/bin/make -f /etc/route10/Makefile start
+ExecStop=/usr/bin/make -f /etc/route10/Makefile stop
+
+[Install]
+WantedBy=default.target

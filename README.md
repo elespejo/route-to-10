@@ -56,9 +56,11 @@ sudo apt install make
 make install
 make test_install
 ```
+The service is active and files' test are all true.
 
 ### Uninstall
 ```
 make uninstall
 make test_uninstall
 ```
+The service is inactive and files' test are all true.

@@ -52,15 +52,13 @@ sudo apt install make
     The ip `192.168.0.219` and `192.168.0.222` is the ip of `sub router`. The `10.10.10.0/25` and `10.10.10.128/25` is the sub net. You can modify them to match your situation.
 
 ### Install
-    Install this project.
-    ```
-    make install
-    make test_install
-    ```
+```
+make install
+make test_install
+```
 
 ### Uninstall
-    Uninstall this project.
-    ```
-    make uninstall
-    make test_uninstall
-    ```
+```
+make uninstall
+make test_uninstall
+```

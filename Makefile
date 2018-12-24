@@ -29,7 +29,7 @@ start:
 	sudo systemctl enable route10.service
 	sudo systemctl start route10.service	
 test_start:
-	sudo systemctl status route10.service
+	sudo systemctl status route10.service || true
 
 
 .PHONY: stop test_stop
@@ -38,7 +38,7 @@ stop:
 	sudo systemctl disable route10.service
 	sudo systemctl daemon-reload
 test_stop:
-	sudo systemctl status route10.service
+	sudo systemctl status route10.service || true
 
 
 .PHONY: install test_install
